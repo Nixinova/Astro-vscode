@@ -1,0 +1,9 @@
+# Packages
+node_modules/
+
+# Compiled output
+syntaxes/*.json
+*.vsix
+
+# Local files
+*.local.*

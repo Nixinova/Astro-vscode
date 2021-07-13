@@ -1,0 +1,51 @@
+{
+    "name": "astro",
+    "private": true,
+    "displayName": "Astro",
+    "description": "Syntax highlighter and formatter for NovaSheets files",
+    "publisher": "Nixinova",
+    "repository": "astro-vscode",
+    "version": "1.0.0",
+    "license": "ISC",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "yaml2json syntaxes/astro.tmLanguage.yaml --save"
+    },
+    "engines": {
+        "vscode": "^1.48.0"
+    },
+    "categories": [
+        "Formatters",
+        "Snippets",
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:novasheets"
+    ],
+    "main": "./formatters/formatter",
+    "contributes": {
+        "languages": [
+            {
+                "id": "astro",
+                "aliases": [
+                    "Astro"
+                ],
+                "extensions": [
+                    ".astro"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "astro",
+                "scopeName": "source.astro",
+                "path": "./syntaxes/astro.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.48.0",
+        "yamljs": "^0.3.0"
+    }
+}

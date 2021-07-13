@@ -22,11 +22,8 @@ repository:
         begin: '(?<!\A)\s*^---$'
         end: '(?<=</html>)\s*$\Z'
         patterns:
-          - include: 'text.html.basic#tags-valid'
-          - include: 'text.html.basic#entities'
-          - include: 'text.html.basic#doctype'
-          - include: 'text.html.basic#comment'
           - include: '#astro'
+          - include: 'text.html.basic'
 
   astro:
     patterns:
@@ -34,7 +31,6 @@ repository:
       - include: '#components'
 
     repository:
-
       inline-javascript:
         patterns:
           - name: meta.inline.js
@@ -51,6 +47,22 @@ repository:
             captures:
               0: { name: punctuation.definition.tag.component.astro }
             patterns:
-              - name: entity.name.type.component.astro
-                match: '(?<=</?)[A-Z]\w*'
-              - include: 'text.html.basic#attribute'
+              - include: '#component-name'
+              - include: '#attribute-name'
+              - include: '#attribute-value'
+        repository:
+          component-name:
+            name: entity.name.type.component.astro
+            match: '(?<=</?)[A-Z]\w*'
+          attribute-name:
+            name: entity.other.attribute-name.astro
+            match: '(?<=[\s":])\w+'
+          attribute-value:
+            patterns:
+              - name: string.quoted.attribute-value.astro
+                begin: '(?<==)"'
+                end: '(?<!\\)"'
+                patterns:
+              - name: string.unquoted.attribute-value.astro
+                match: '(?<==)\S+'
+                patterns:

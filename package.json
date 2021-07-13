@@ -5,7 +5,7 @@
     "publisher": "Nixinova",
     "repository": "https://github.com/Nixinova/Astro-vscode",
     "license": "ISC",
-    "description": "Syntax highlighter for Snowpack's Astro site generator.",
+    "description": "Language support for Snowpack's Astro site generator.",
     "keywords": [
         "astro",
         "snowpack",

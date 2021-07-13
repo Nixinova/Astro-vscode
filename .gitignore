@@ -2,7 +2,7 @@
 node_modules/
 
 # Compiled output
-syntaxes/*.json
+grammars/*.json
 *.vsix
 
 # Local files

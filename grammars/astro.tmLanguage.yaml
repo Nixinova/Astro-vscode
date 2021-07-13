@@ -1,5 +1,5 @@
 name: Astro
-scopeName: source.astro
+scopeName: text.html.astro
 fileTypes:
   - '.astro'
 

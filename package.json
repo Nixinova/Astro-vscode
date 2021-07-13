@@ -13,7 +13,7 @@
     ],
     "scripts": {
         "vscode:prepublish": "npm run compile",
-        "compile": "yaml2json syntaxes/astro.tmLanguage.yaml --save"
+        "compile": "yaml2json ./grammars/astro.tmLanguage.yaml --save"
     },
     "engines": {
         "vscode": "^1.48.0"
@@ -38,8 +38,8 @@
         "grammars": [
             {
                 "language": "astro",
-                "scopeName": "source.astro",
-                "path": "./syntaxes/astro.tmLanguage.json"
+                "scopeName": "text.html.astro",
+                "path": "./grammars/astro.tmLanguage.json"
             }
         ],
         "snippets": [

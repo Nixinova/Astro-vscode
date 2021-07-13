@@ -1,7 +1,6 @@
 {
     "name": "astro",
-    "private": true,
-    "version": "1.0.0-dev",
+    "version": "1.0.0",
     "displayName": "Astro",
     "publisher": "Nixinova",
     "repository": "https://github.com/Nixinova/Astro-vscode",
@@ -23,10 +22,6 @@
         "Snippets",
         "Programming Languages"
     ],
-    "activationEvents": [
-        "onLanguage:astro"
-    ],
-    "main": "",
     "contributes": {
         "languages": [
             {

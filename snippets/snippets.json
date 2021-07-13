@@ -1,0 +1,65 @@
+{
+    "Import Markdown component": {
+        "prefix": "import Markdown",
+        "body": [
+            "import { Markdown } from 'astro/components';"
+        ],
+        "description": ""
+    },
+    "Import Prism component": {
+        "prefix": "import Prism",
+        "body": [
+            "import { Prism } from 'astro/components';"
+        ],
+        "description": ""
+    },
+	"Import custom component": {
+        "prefix": "import component",
+        "body": [
+            "import { $1 } from '../components/$1.$2';"
+        ],
+        "description": ""
+    },
+	"Import custom layout": {
+        "prefix": "import layout",
+        "body": [
+            "import { $1 } from '../layouts/$1.$2';"
+        ],
+        "description": ""
+    },
+	"Import collection props": {
+        "prefix": "collection",
+        "body": [
+            "const { collection } = Astro.props;"
+        ],
+        "description": ""
+    },
+	"Fetch content from file": {
+        "prefix": "Astro.fetchContent",
+        "body": [
+            "Astro.fetchContent($1)"
+        ],
+        "description": ""
+    },
+	"Fetch web URL": {
+        "prefix": "Astro.request",
+        "body": [
+            "Astro.request($1)"
+        ],
+        "description": ""
+    },
+	"Fetch metadata": {
+        "prefix": "import.meta",
+        "body": [
+            "import.meta"
+        ],
+        "description": ""
+    },
+	"Create site URL": {
+        "prefix": "Astro.site",
+        "body": [
+            "Astro.site($1)"
+        ],
+        "description": ""
+    }
+}

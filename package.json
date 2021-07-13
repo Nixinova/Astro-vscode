@@ -1,12 +1,17 @@
 {
     "name": "astro",
     "private": true,
+    "version": "1.0.0-dev",
     "displayName": "Astro",
-    "description": "Syntax highlighter and formatter for NovaSheets files",
     "publisher": "Nixinova",
-    "repository": "astro-vscode",
-    "version": "1.0.0",
+    "repository": "https://github.com/Nixinova/Astro-vscode",
     "license": "ISC",
+    "description": "Syntax highlighter for Snowpack's Astro site generator.",
+    "keywords": [
+        "astro",
+        "snowpack",
+        "astro site generator"
+    ],
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "yaml2json syntaxes/astro.tmLanguage.yaml --save"
@@ -15,12 +20,13 @@
         "vscode": "^1.48.0"
     },
     "categories": [
+        "Snippets",
         "Programming Languages"
     ],
     "activationEvents": [
-        "onLanguage:novasheets"
+        "onLanguage:astro"
     ],
-	"main": "",
+    "main": "",
     "contributes": {
         "languages": [
             {
@@ -40,10 +46,15 @@
                 "scopeName": "source.astro",
                 "path": "./syntaxes/astro.tmLanguage.json"
             }
+        ],
+        "snippets": [
+            {
+                "language": "astro",
+                "path": "./snippets/snippets.json"
+            }
         ]
     },
     "devDependencies": {
-        "@types/vscode": "^1.48.0",
         "yamljs": "^0.3.0"
     }
 }

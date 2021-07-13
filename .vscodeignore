@@ -1,5 +1,6 @@
 .vscode/
 .git/
+test/
 node_modules/
 
 .gitignore

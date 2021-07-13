@@ -15,14 +15,12 @@
         "vscode": "^1.48.0"
     },
     "categories": [
-        "Formatters",
-        "Snippets",
         "Programming Languages"
     ],
     "activationEvents": [
         "onLanguage:novasheets"
     ],
-    "main": "./formatters/formatter",
+	"main": "",
     "contributes": {
         "languages": [
             {

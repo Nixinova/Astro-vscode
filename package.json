@@ -39,7 +39,12 @@
             {
                 "language": "astro",
                 "scopeName": "text.html.astro",
-                "path": "./grammars/astro.tmLanguage.json"
+                "path": "./grammars/astro.tmLanguage.json",
+                "embeddedLanguages": {
+                    "text.html.basic": "html",
+                    "source.js": "javascript",
+                    "source.css": "css"
+                  }
             }
         ],
         "snippets": [

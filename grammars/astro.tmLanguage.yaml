@@ -20,7 +20,7 @@ repository:
     patterns:
       - name: meta.block.html
         begin: '(?<!\A)\s*^---$'
-        end: '(?<=</html>)\s*$\Z'
+        end: '.\Z'
         patterns:
           - include: '#astro'
           - include: 'text.html.basic'
@@ -28,6 +28,7 @@ repository:
   astro:
     patterns:
       - include: '#inline-javascript'
+      - include: '#embedded'
       - include: '#components'
 
     repository:
@@ -39,13 +40,26 @@ repository:
             patterns:
               - include: 'source.js'
 
+      embedded:
+        patterns:
+          - name: meta.block.embedded.js
+            begin: '<script>'
+            end: '</script>'
+            patterns:
+              - include: 'source.js'
+          - name: meta.block.embedded.css
+            begin: '<style>'
+            end: '</style>'
+            patterns:
+              - include: 'source.css'
+
       components:
         patterns:
           - name: meta.component.astro
             begin: '</?(?=[A-Z])'
             end: '/?>'
             captures:
-              0: { name: punctuation.definition.tag.component.astro }
+              '0': { name: punctuation.definition.tag.component.astro }
             patterns:
               - include: '#component-name'
               - include: '#attribute-name'
@@ -62,7 +76,5 @@ repository:
               - name: string.quoted.attribute-value.astro
                 begin: '(?<==)"'
                 end: '(?<!\\)"'
-                patterns:
               - name: string.unquoted.attribute-value.astro
                 match: '(?<==)\S+'
-                patterns:

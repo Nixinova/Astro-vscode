@@ -6,7 +6,7 @@
 
 # Astro Extension
 
-This is a VSCode extension which provides language support for Snowpack's [Astro](https://github.com/snowpack/astro) static site generator.
+This is a VSCode extension which provides language support for Snowpack's [Astro](https://github.com/withastro/astro) static site generator.
 
 ## Features
 
